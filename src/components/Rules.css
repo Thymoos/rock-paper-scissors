@@ -1,0 +1,41 @@
+.rules {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rules__panel {
+    width: 420px;
+    height: 430px;
+    background-color: #fff;
+    color: #50546D;
+    border-radius: 15px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rules__panel--header {
+    position: absolute;
+    left: 10%;
+    top: 8%;
+    user-select: none;
+}
+
+.rules__panel--closeBtn {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    cursor: pointer;
+}
+
+.rules__panel--img {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%, 0);
+}
