@@ -5,3 +5,24 @@ body {
     height: 100vh;
     width: 100vw;
 }
+
+.rules__btn {
+    height: 40px;
+    width: 120px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rules__btn:hover {
+    background-color: white;
+    color: #151A3D;
+}

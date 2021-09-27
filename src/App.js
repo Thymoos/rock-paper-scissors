@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <Scoreboard/>
       <Options/>
+
+      <button className="rules__btn">RULES</button>
     </div>
   );
 }
