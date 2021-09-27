@@ -9,10 +9,10 @@ import scissors from "../images/icon-scissors.svg";
 const Options = () => {
     return ( 
         <div className="options">
-            <img src={triangle} alt="" className="options__img--bg-triangle" />
-            <img src={paper} alt="" className="options__img--paper" />
-            <img src={rock} alt="" className="options__img--rock" />
-            <img src={scissors} alt="" className="options__img--scissors" />
+           <img src={triangle} alt="" className="options__img options__img--bg-triangle" />
+            <div className="options__border options__border--paper"><img src={paper} alt="paper" className="options__img options__img--paper" /></div>
+            <div className="options__border options__border--rock"><img src={rock} alt="rock" className="options__img options__img--rock" /></div>
+            <div className="options__border options__border--scissors"><img src={scissors} alt="scissors" className="options__img options__img--scissors" /></div>
         </div>
      );
 }
