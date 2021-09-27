@@ -11,6 +11,7 @@
     left: 50vw;
     transform: translate(-50%, 0);
     padding: 30px;
+    user-select: none;
 }
 
 .scoreboard__img--logo {
