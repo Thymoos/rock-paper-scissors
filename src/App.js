@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Scoreboard from './components/Scoreboard';
 import Options from './components/Options';
@@ -14,18 +15,30 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+
       <Scoreboard/>
-      <Options/>
+        
+        <Switch>
+          <Route exact path ="/">
+            <Options/>
 
-      <button 
-      className="rules__btn"
-      onClick={handleRulesPanel}
-      >RULES</button>
+            <button 
+            className="rules__btn"
+            onClick={handleRulesPanel}
+            >RULES</button>
 
-      {rulesActive ? <Rules handleRulesPanel={handleRulesPanel}/> : null}
+            {rulesActive ? <Rules handleRulesPanel={handleRulesPanel}/> : null}
 
-    </div>
+          </Route>
+
+          <Route exact path="/game">
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
