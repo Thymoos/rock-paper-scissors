@@ -13,9 +13,9 @@ const Options = () => {
             alt="" 
             className="options__img options__img--bg-triangle" />
 
-            <Token type="paper"/>
-            <Token type="rock"/>
-            <Token type="scissors"/>
+            <div className="options__token--paper"><Token type="paper"/></div>
+            <div className="options__token--rock"><Token type="rock"/></div>
+            <div className="options__token--scissors"><Token type="scissors"/></div>
     
         </div>
      );

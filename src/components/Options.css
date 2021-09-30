@@ -15,3 +15,21 @@
     background-color: transparent;
     z-index: -2;
 }
+
+.options__token--paper {
+    top: -5%;
+    left: 12%;
+    position: absolute;
+}
+
+.options__token--rock {
+    bottom: 46%;
+    left: 38%;
+    position: absolute;
+}
+
+.options__token--scissors {
+    top: -5%;
+    right: 36%;
+    position: absolute;
+}
