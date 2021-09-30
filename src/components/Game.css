@@ -34,12 +34,24 @@
 
 .game__token {
     z-index: 100;
-    left: 40%;
+    left: 58%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 156px;
-    height: 156px;
     position: relative;
+}
+
+/* Styles for token placeholder */
+
+.game__token--placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    left: 4%;
+    margin-top: 10px;
+    z-index: -1;
 }
 
 /* Change of token size for game panel */
