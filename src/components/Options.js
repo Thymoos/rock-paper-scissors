@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import "./Options.css";
 
 import Token from './Token';
@@ -13,9 +14,9 @@ const Options = () => {
             alt="" 
             className="options__img options__img--bg-triangle" />
 
-            <div className="options__token--paper"><Token type="paper"/></div>
-            <div className="options__token--rock"><Token type="rock"/></div>
-            <div className="options__token--scissors"><Token type="scissors"/></div>
+            <Link to="/game"><div className="options__token--paper"><Token type="paper"/></div></Link>
+            <Link to="/game"><div className="options__token--rock"><Token type="rock"/></div></Link>
+            <Link to="/game"><div className="options__token--scissors"><Token type="scissors"/></div></Link>
     
         </div>
      );
