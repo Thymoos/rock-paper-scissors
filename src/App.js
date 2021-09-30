@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Scoreboard from './components/Scoreboard';
 import Options from './components/Options';
 import Rules from './components/Rules';
+import Game from './components/Game';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           </Route>
 
           <Route exact path="/game">
+            <Game/>
           </Route>
         </Switch>
 
