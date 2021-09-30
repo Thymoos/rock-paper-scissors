@@ -1,0 +1,76 @@
+.game {
+    width: 80vw;
+    height: 60vh;
+    max-width: 1000px;
+    position: relative;
+    left: 50%;
+    top: 26vh;
+    transform: translate(-50%, 0);
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.game__title {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.game__pick {
+    width: 30%;
+    height: 80%;
+    /* background-color: black; */
+    position: relative;
+    color: white;
+}
+
+.game__token {
+    z-index: 100;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 156px;
+    height: 156px;
+    position: relative;
+}
+
+/* Change of token size for game panel */
+
+.game .options__img {
+    width: 100px;
+}
+
+
+.game .options__border {
+    height: 200px;
+    width: 200px;
+    cursor: initial;
+    box-shadow: inset 0 16px 5px #BBBCEE;
+}
+
+.game .options__border:after {
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+}
+
+.game .options__border--paper:after {
+    box-shadow: 0 10px #2C43B7;
+}
+
+.game .options__border--rock:after {
+    box-shadow: 0 10px #9E1533;
+}
+
+.game .options__border--scissors:after {
+    box-shadow: 0 10px #C76C1B;
+}

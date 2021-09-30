@@ -32,28 +32,12 @@
     box-shadow: 0 6px #2C43B7;
 }
 
-
-.options__border--paper {
-    top: -5%;
-    left: 15%;
-}
-
 .options__border--rock:after {
     background: var(--rock-gradient);
     box-shadow: 0 6px #9E1533;
 }
 
-.options__border--rock {
-    bottom: 10%;
-    left: 38%;
-}
-
 .options__border--scissors:after {
     background: var(--scissors-gradient);
     box-shadow: 0 6px #C76C1B;
-}
-
-.options__border--scissors {
-    top: -5%;
-    right: 15%;
 }
