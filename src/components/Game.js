@@ -3,14 +3,14 @@ import './Game.css';
 
 import Token from './Token';
 
-const Game = () => {
+const Game = ({playerChoice}) => {
     return ( 
         <div className="game">
 
             <div className="game__pick game__pick--player">
                 <h3 className="game__title game__title--player">YOU PICKED</h3>
                 <div className="game__token">
-                    <Token type="paper" className="game__token"/>
+                    <Token type={playerChoice} className="game__token"/>
                 </div>
             </div>
 

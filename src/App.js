@@ -11,8 +11,19 @@ function App() {
 
   const [rulesActive, setRulesActive] = useState(false);
 
+  const [chosenOption, setChosenOption] = useState("");
+
+  // Show rules function
+
   const handleRulesPanel = () => {
     setRulesActive(!rulesActive);
+  }
+
+  // Get player choice function
+
+  const handlePlayerChoice = (e) => {
+    const choice = e.target.getAttribute("type");
+    setChosenOption(choice);
   }
 
   return (
@@ -23,11 +34,11 @@ function App() {
         
         <Switch>
           <Route exact path ="/">
-            <Options/>
+            <Options handlePlayerChoice={handlePlayerChoice}/>
           </Route>
 
           <Route exact path="/game">
-            <Game/>
+            <Game playerChoice={chosenOption}/>
           </Route>
           
         </Switch>
