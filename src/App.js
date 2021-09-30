@@ -23,19 +23,18 @@ function App() {
         <Switch>
           <Route exact path ="/">
             <Options/>
-
-            <button 
-            className="rules__btn"
-            onClick={handleRulesPanel}
-            >RULES</button>
-
-            {rulesActive ? <Rules handleRulesPanel={handleRulesPanel}/> : null}
-
           </Route>
 
           <Route exact path="/game">
           </Route>
         </Switch>
+
+        <button 
+            className="rules__btn"
+            onClick={handleRulesPanel}
+            >RULES</button>
+
+            {rulesActive ? <Rules handleRulesPanel={handleRulesPanel}/> : null}
 
       </div>
     </Router>
