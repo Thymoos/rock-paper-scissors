@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/game">
             <Game/>
           </Route>
+          
         </Switch>
 
         <button 
