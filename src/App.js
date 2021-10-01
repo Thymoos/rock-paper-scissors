@@ -13,6 +13,8 @@ function App() {
 
   const [chosenOption, setChosenOption] = useState("");
 
+  const [houseChoice, setHouseChoice] = useState("");
+
   // Show rules function
 
   const handleRulesPanel = () => {
@@ -24,6 +26,18 @@ function App() {
   const handlePlayerChoice = (e) => {
     const choice = e.target.getAttribute("type");
     setChosenOption(choice);
+    
+    handleHouseChoice();
+  }
+
+  // Get house choice function is called inside of handlePlayerChoice
+
+  const handleHouseChoice = () => {
+    const randomNumber = Math.floor(Math.random()*(2 - 0 + 1)) + 0;
+    
+    if(randomNumber === 0) setHouseChoice("rock");
+    else if(randomNumber === 1) setHouseChoice("paper");
+    else setHouseChoice("scissors");
   }
 
   return (
@@ -34,11 +48,17 @@ function App() {
         
         <Switch>
           <Route exact path ="/">
-            <Options handlePlayerChoice={handlePlayerChoice}/>
+            <Options 
+            handlePlayerChoice={handlePlayerChoice}
+            handleHouseChoice={handleHouseChoice}
+            />
           </Route>
 
           <Route exact path="/game">
-            <Game playerChoice={chosenOption}/>
+            <Game 
+            playerChoice={chosenOption}
+            houseChoice={houseChoice}
+            />
           </Route>
           
         </Switch>

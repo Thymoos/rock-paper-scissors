@@ -3,7 +3,7 @@ import './Game.css';
 
 import Token from './Token';
 
-const Game = ({playerChoice}) => {
+const Game = ({playerChoice, houseChoice}) => {
     return ( 
         <div className="game">
 
@@ -18,7 +18,7 @@ const Game = ({playerChoice}) => {
             <div className="game__pick game__pick--house">
                 <h3 className="game__title game__title--house">THE HOUSE PICKED</h3>
                 <div className="game__token">
-                    {/* <Token type="rock" className="game__token"/> */}
+                    <Token type={houseChoice} className="game__token"/>
                     <div className="game__token--placeholder"></div>
                 </div>
             </div>
