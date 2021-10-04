@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Game.css';
 
 import Token from './Token';
 
-const Game = ({playerChoice, houseChoice}) => {
+const Game = ({playerChoice, houseChoice, handleGame}) => {
+
+    useEffect(() => {
+        handleGame()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+
     return ( 
         <div className="game">
 

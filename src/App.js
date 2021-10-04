@@ -15,6 +15,10 @@ function App() {
 
   const [houseChoice, setHouseChoice] = useState("");
 
+  const [score, setScore] = useState(0);
+
+  const [result, setResult] = useState("");
+
   // Show rules function
 
   const handleRulesPanel = () => {
@@ -40,11 +44,56 @@ function App() {
     else setHouseChoice("scissors");
   }
 
+  // Function responsible for comparing inputs and choosing the winner
+
+  const handleGame = () => {  
+   // Draw
+   if(chosenOption === houseChoice) {
+      setResult("Draw");
+   }
+
+    // Paper
+  else if(chosenOption === "paper") {
+    if(houseChoice === "rock") {
+      setResult("YOU WIN");
+      setScore(prevState => prevState+1);
+     }
+    else if(houseChoice === "scissors") {
+     setResult("YOU LOSE");
+     setScore(prevState => prevState-1);
+    }
+ }
+
+  // Rock
+  else if(chosenOption === "rock") {
+    if(houseChoice === "scissors") {
+      setResult("YOU WIN");
+      setScore(prevState => prevState+1);
+    }
+    else if(houseChoice === "paper") {
+      setResult("YOU LOSE");
+      setScore(prevState => prevState-1);
+    }
+  }
+
+  // Scissors 
+  else if(chosenOption === "scissors") {
+    if(houseChoice === "paper") {
+      setResult("YOU WIN");
+      setScore(prevState => prevState+1);
+    }
+    else if(houseChoice === "rock") {
+      setResult("YOU LOSE");
+      setScore(prevState => prevState-1);
+    }
+  }
+}
+
   return (
     <Router>
       <div className="App">
 
-      <Scoreboard/>
+      <Scoreboard score={score} />
         
         <Switch>
           <Route exact path ="/">
@@ -58,6 +107,8 @@ function App() {
             <Game 
             playerChoice={chosenOption}
             houseChoice={houseChoice}
+            handleGame={handleGame}
+            result={result}
             />
           </Route>
           

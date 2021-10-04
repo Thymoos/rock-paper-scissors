@@ -6,7 +6,6 @@
     left: 50%;
     top: 26vh;
     transform: translate(-50%, 0);
-    /* background-color: #fff; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,7 +27,6 @@
 .game__pick {
     width: 30%;
     height: 80%;
-    /* background-color: black; */
     position: relative;
     color: white;
 }
@@ -40,6 +38,8 @@
     transform: translate(-50%, -50%);
     position: relative;
 }
+
+/* House token appear animation */
 
 .game__token--house {
     animation: 1s houseChoiceAppear;
