@@ -41,6 +41,22 @@
     position: relative;
 }
 
+.game__token--house {
+    animation: 1s houseChoiceAppear;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes houseChoiceAppear {
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
 /* Styles for token placeholder */
 
 .game__token--placeholder {
@@ -50,9 +66,10 @@
     background-color: black;
     opacity: 0.2;
     position: absolute;
-    left: 4%;
     margin-top: 10px;
     z-index: -1;
+    left: 12%;
+    bottom: 10%;
 }
 
 /* Change of token size for game panel */
