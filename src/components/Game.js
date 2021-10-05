@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import './Game.css';
 
 import Token from './Token';
 
-const Game = ({playerChoice, houseChoice, handleGame}) => {
+const Game = ({playerChoice, houseChoice, handleGame, result}) => {
 
     useEffect(() => {
         handleGame()
@@ -19,6 +20,11 @@ const Game = ({playerChoice, houseChoice, handleGame}) => {
                 <div className="game__token  game__token--player">
                     <Token type={playerChoice} className="game__token"/>
                 </div>
+            </div>
+
+            <div className="game__info">
+                <h1 className="game__info--header">{result}</h1>
+                <Link to="/"><button className="game__info--button">PLAY AGAIN</button></Link>
             </div>
 
             <div className="game__pick game__pick--house">
