@@ -88,18 +88,16 @@
 
 /*  Information panel appear animation */
 
-.game {
-    /* animation: sliding 1s linear 2s forwards; */
+.game__info.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s linear;
 }
 
-@keyframes sliding {
-    0% {
-        width: 80vw;
-    }
-
-    100% {
-        width: 100vw;
-    }
+.game__info.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s linear;
 }
 
 /* Styles for token placeholder */

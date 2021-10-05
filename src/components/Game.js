@@ -8,8 +8,18 @@ const Game = ({playerChoice, houseChoice, handleGame, result}) => {
 
     useEffect(() => {
         handleGame()
+        showInfoPanel()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
+
+    const showInfoPanel = () => {
+       const panel = document.getElementById("info");
+
+       setTimeout(() => {
+        panel.classList.remove("hidden");
+        panel.classList.add("visible");
+       }, 2000)
+    }
 
     return ( 
         <div className="game">
@@ -22,7 +32,7 @@ const Game = ({playerChoice, houseChoice, handleGame, result}) => {
                 </div>
             </div>
 
-            <div className="game__info">
+            <div className="game__info hidden" id="info">
                 <h1 className="game__info--header">{result}</h1>
                 <Link to="/"><button className="game__info--button">PLAY AGAIN</button></Link>
             </div>

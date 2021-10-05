@@ -10,7 +10,7 @@ const Scoreboard = ({score}) => {
     // Timeout for score update
 
     useEffect(() => {
-        setTimeout(() => {setDelayedScore(score);}, 1000);
+        setTimeout(() => {setDelayedScore(score);}, 2450);
     },[score])
 
     return ( 
