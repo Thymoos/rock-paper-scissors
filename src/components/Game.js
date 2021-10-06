@@ -26,7 +26,7 @@ const Game = ({playerChoice, houseChoice, handleGame, result}) => {
 
             <div className="game__pick game__pick--player">
                 <h3 className="game__title game__title--player">YOU PICKED</h3>
-                <div className="game__token--placeholder"></div>
+                <div className="game__token--placeholder" id="player-placeholder"></div>
                 <div className="game__token  game__token--player">
                     <Token type={playerChoice} className="game__token"/>
                 </div>
@@ -39,7 +39,7 @@ const Game = ({playerChoice, houseChoice, handleGame, result}) => {
 
             <div className="game__pick game__pick--house">
                 <h3 className="game__title game__title--house">THE HOUSE PICKED</h3>
-                <div className="game__token--placeholder"></div>
+                <div className="game__token--placeholder" id="house-placeholder"></div>
                 <div className="game__token  game__token--house">
                     <Token type={houseChoice} className="game__token"/>
                 </div>

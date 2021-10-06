@@ -47,6 +47,9 @@ function App() {
   // Function responsible for comparing inputs and choosing the winner
 
   const handleGame = () => {  
+    const playerToken = document.getElementById("player-placeholder");
+    const houseToken = document.getElementById("house-placeholder");
+
    // Draw
    if(chosenOption === houseChoice) {
       setResult("Draw");
@@ -57,10 +60,12 @@ function App() {
     if(houseChoice === "rock") {
       setResult("YOU WIN");
       setScore(prevState => prevState+1);
+      setTimeout(() => {playerToken.classList.add("won");}, 3000);
      }
     else if(houseChoice === "scissors") {
      setResult("YOU LOSE");
      setScore(prevState => prevState-1);
+     setTimeout(() => {houseToken.classList.add("won");}, 3000);
     }
  }
 
@@ -69,10 +74,12 @@ function App() {
     if(houseChoice === "scissors") {
       setResult("YOU WIN");
       setScore(prevState => prevState+1);
+      setTimeout(() => {playerToken.classList.add("won");}, 3000);
     }
     else if(houseChoice === "paper") {
       setResult("YOU LOSE");
       setScore(prevState => prevState-1);
+      setTimeout(() => {houseToken.classList.add("won");}, 3000);
     }
   }
 
@@ -81,10 +88,12 @@ function App() {
     if(houseChoice === "paper") {
       setResult("YOU WIN");
       setScore(prevState => prevState+1);
+      setTimeout(() => {playerToken.classList.add("won");}, 3000);
     }
     else if(houseChoice === "rock") {
       setResult("YOU LOSE");
       setScore(prevState => prevState-1);
+      setTimeout(() => {houseToken.classList.add("won");}, 3000);
     }
   }
 }
