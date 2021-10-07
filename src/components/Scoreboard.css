@@ -40,3 +40,39 @@
     color: var(--text-dark);
     line-height: 60px;
 }
+
+@media (max-width: 800px) {
+    .scoreboard {
+        width: 80vw;
+        height: 15vh;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .scoreboard__img--logo {
+        height: 50px;
+        width: 90px;
+    }
+
+    .scoreboard__score {
+        background-color: #fff;
+        height: 70px;
+        width: 80px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .scoreboard__score--title {
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--text-score);
+        letter-spacing: 2px;
+        margin-top: 4%;
+    }
+
+    .scoreboard__score--number {
+        font-size: 45px;
+        color: var(--text-dark);
+        line-height: 45px;
+    }
+}

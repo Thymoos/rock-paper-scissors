@@ -41,3 +41,28 @@
     transform: translate(-50%, 0);
     user-select: none;
 }
+
+@media (max-width: 800px) {
+    .rules__panel {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .rules__panel--header {
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, 0);
+    }
+
+    .rules__panel--closeBtn {
+        right: 50%;
+        top: 88vh;
+        transform: translate(+50%, 0);
+    }
+
+    .rules__panel--img {
+        left: 50%;
+        bottom: 25%;
+    }
+}

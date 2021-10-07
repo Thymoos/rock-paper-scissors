@@ -33,3 +33,32 @@
     right: 36%;
     position: absolute;
 }
+
+@media (max-width: 800px) {
+    .options {
+        height: 40vh;
+        width: 80vw;
+        top: 35vh;
+        left: 50vw;
+        transform: translate(-50%, 0);
+    }
+
+    .options__img--bg-triangle {
+        width: 250px;
+    }
+
+    .options__token--paper {
+        top: -5%;
+        left: 2%;
+    }
+
+    .options__token--rock {
+        bottom: 46%;
+        left: 33%;
+    }
+
+    .options__token--scissors {
+        top: -5%;
+        right: 36%;
+    }
+}

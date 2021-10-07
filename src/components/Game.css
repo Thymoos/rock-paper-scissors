@@ -11,6 +11,7 @@
     align-items: center;
     text-align: center;
     user-select: none;
+    margin: 0;
 }
 
 .game__title {
@@ -186,4 +187,220 @@
 
 .game .options__border--scissors:after {
     box-shadow: 0 10px #C76C1B;
+}
+
+@media (min-width: 1366px) {
+    .game {
+        animation: 1s ease-out 2s 1 slide forwards;
+        width: 30vw;
+    }
+
+    @keyframes slide {
+        0% {
+            width: 30vw;
+        }
+
+        100% {
+            width: 60vw;
+        }
+    }
+
+    .game__title {
+        left: 40%;
+        top: 12%;
+        transform: translate(-50%, 0);
+        width: 300%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .game {
+        animation: 2s ease-out 2s 1 slide forwards;
+    }
+
+    .game__token {
+        left: 43%;
+    }
+
+    .game__token--placeholder {
+        left: -3%;
+    }
+
+    .game__token--player {
+        margin-left: 20px;
+    }
+
+    .game__title--player {
+        margin-left: 30px;
+    }
+
+    .game__token--placeholder.placeholder--player {
+        left: 12%;
+    }
+}
+
+@media (max-width: 800px) {
+    .game {
+        animation: none;
+        width: 100vw;
+        height: 60vh;
+        top: 5vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .game .options__img {
+        width: 50px;
+    }
+
+    .game .options__border {
+        height: 100px;
+        width: 100px;
+        cursor: initial;
+        box-shadow: inset 0 16px 5px #BBBCEE;
+    }
+
+    .game .options__border:after {
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+    }
+
+    .game .options__border--paper:after {
+        box-shadow: 0 5px #2C43B7;
+    }
+
+    .game .options__border--rock:after {
+        box-shadow: 0 5px #9E1533;
+    }
+
+    .game .options__border--scissors:after {
+        box-shadow: 0 5px #C76C1B;
+    }
+
+    .game__token--placeholder {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0.2;
+        position: absolute;
+        margin-top: 10px;
+        z-index: -1;
+        left: 11%;
+        bottom: 21%;
+    }
+
+    .game__title {
+        left: 48%;
+        bottom: 20vh;
+        transform: translate(-50%, +190%);
+        width: 150%;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+
+    .game__title--player {
+        left: 45%;
+    }
+
+    .game__pick {
+        width: 30%;
+        height: 80%;
+        position: relative;
+        color: white;
+    }
+
+    .game__info {
+        margin-top: 15%;
+    }
+
+    .game__info--header {
+        color: white;
+        font-size: 50px;
+    }
+
+    .game__info--button {
+        width: 180px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        color: #1A2748;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 15px;
+        box-shadow: 0 2px 4px rgb(26, 25, 25);
+        transition: 0.2s;
+    }
+
+    .game__pick--player {
+        order: 1;
+        margin-left: 3%;
+    }
+
+    .game__pick--house {
+        order: 2;
+    }
+
+    .game__info {
+        order: 3;
+    }
+
+    .game__token {
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (width: 411px) {
+    .game__token--placeholder {
+        left: 26%;
+        bottom: 25%;
+    }
+
+    .game__token--placeholder.placeholder--house {
+        left: 9%;
+    }
+
+    .game__token--placeholder.placeholder--player {
+        left: 11%;
+    }
+}
+
+@media (width: 375px) {
+    .game__token--placeholder {
+        left: 10%;
+        bottom: 22.5%;
+    }
+
+    .game__token--placeholder.placeholder--player {
+        left: 10%;
+    }
+}
+
+@media (width: 414px) {
+    .game__token--placeholder {
+        left: 26%;
+        bottom: 25%;
+    }
+
+    .game__token--placeholder.placeholder--house {
+        left: 9%;
+    }
+
+    .game__token--placeholder.placeholder--player {
+        left: 11%;
+    }
+}
+
+@media (width: 360px) {
+    .game__token--placeholder.placeholder--player {
+        left: 12%;
+    }
 }
